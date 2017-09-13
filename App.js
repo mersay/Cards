@@ -6,7 +6,7 @@ import { Provider, connect } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import reducers from './Reducers';
 import Settings from './Containers/SettingsContainer';
-import Game from './Components/Game';
+import Game from './Containers/GameContainer';
 import Home from './Components/Home'
 //import settingsReducer from "./Reducers/settingsReducer";
 

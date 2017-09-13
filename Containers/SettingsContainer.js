@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import Settings from '../Components/Settings';
 
 const mapStateToProps = (state) => {
   return {
-        players: state.settings.players,
-        cards : state.settings.cards,
-        timer : state.settings.timer,
+      players: state.settings.players,
+      cards : state.settings.cards,
+      timer : state.settings.timer,
     }
 };
 
