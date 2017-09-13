@@ -8,9 +8,10 @@ export default class Card extends React.Component {
   }
 
   render() {
+
     return (
       <View>
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={() => this.props.onPress()}>
           <Text style={styles.cardText}>{this.props.number}</Text>
         </TouchableOpacity>
       </View>
