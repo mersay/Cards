@@ -11,7 +11,7 @@ export default class Home extends React.Component {
     this.state = {
       cowHeads : 0,
       timer: 10,
-      players: 4,
+      players: 5,
       cards: 10,
     }
   }
@@ -31,7 +31,7 @@ export default class Home extends React.Component {
               Instructions
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=> this.props.navigation.navigate('Settings', {players: this.state.players, cards: this.state.cards, timer: this.state.timer})}
+          <TouchableOpacity onPress={()=> this.props.navigation.navigate('Settings')}//, {players: this.state.players, cards: this.state.cards, timer: this.state.timer})}
                             style={[{marginTop:10}]}>
             <Text style={styles.statsText}>
               Settings
