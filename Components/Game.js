@@ -14,17 +14,24 @@ export default class Game extends React.Component {
     }
   }
 
+  newGame() {
+
+  }
+
   render() {
     const {goBack} = this.props.navigation;
     return (
       <View style={styles.container}>
 
-        <View style={[styles.row,{marginTop: 15,justifyContent: 'space-between',alignItems: 'center'}]}>
+        <View style={[styles.row,{marginTop: 20,justifyContent: 'space-between'}]}>
           <TouchableOpacity onPress={() => goBack()}>
-            <Text style={styles.statsText}>BACK</Text>
+            <Text style={styles.back}>Back</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => this.newGame()}>
+            <Text style={styles.back}>New</Text>
           </TouchableOpacity>
           <View>
-            <Text style={styles.statsText}>
+            <Text style={styles.back}>
               CowHeads: {this.state.cowHeads}
             </Text>
           </View>
@@ -54,7 +61,7 @@ export default class Game extends React.Component {
             <Card number={13}></Card>
           </TouchableOpacity>
         </View>
-        <View style={{height:100}}>
+        <View style={{height:70}}>
           <ScrollView directionalLockEnabled={true}
                       horizontal={true}
                       style={[styles.playersCards,{backgroundColor: 'purple'}]}>
@@ -69,9 +76,10 @@ export default class Game extends React.Component {
 
           </ScrollView>
         </View>
-        <View>
-          <Text style={[styles.statsText, {marginTop:10}]}>
-            Timer: {this.state.timer}</Text>
+        <View style={{marginTop: 20, flexDirection: 'row', marginHorizontal:10, justifyContent: 'space-between'}}>
+          <Text style={[styles.timer]}>Timer: {this.state.timer}</Text>
+          <Text style={[styles.back]}>Player: {this.state.timer}</Text>
+
         </View>
       </View>
     );
@@ -82,7 +90,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#82CAFF',
-    alignItems: 'center',
   },
   row: {
     flexDirection : 'row',
@@ -93,9 +100,8 @@ const styles = StyleSheet.create({
 
   },
   playersCards: {
-    marginTop: 5,
     borderRadius: 3,
-    padding:10,
+    padding: 10,
     flex:1,
   },
   controls: {
@@ -111,5 +117,15 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: 'white',
     fontWeight: "600",
+  },
+  back:{
+    color: 'white',
+    fontSize : 15,
+    fontWeight: '500'
+  },
+  timer:{
+    color: 'white',
+    fontSize:20,
+    fontWeight: '500'
   }
 });

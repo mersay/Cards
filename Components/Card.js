@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 3,
     backgroundColor: 'white',
-    height: 70,
-    width: 50,
+    height: 50,
+    width: 40,
     marginHorizontal: 5,
   },
   cardText: {
     color: 'blue',
-    fontSize: 18,
+    fontSize: 20,
   }
 });
